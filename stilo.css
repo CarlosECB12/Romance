@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(35, 31, 71);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+:root{
+    --colorTextos: #c9c9c9;
+}
+::before,::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0a3d9 ;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+
+}
+.login-box {
+    width: 300px;
+    margin: auto;
+    background-color: #640b0b;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px #ff0404;
+    padding: 20px;
+    text-align: center;
+    animation-name: login-box;
+    animation-duration: 1s;
+	border-radius: 30px;
+  }
+  @keyframes login-box {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  h4{
+	color: #fff;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+form{
+    padding: 10px 0;
+}
+.form{
+    margin: auto;
+}
+form .grupo{
+    position: relative;
+}
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+    }
+  
+  input, textarea{
+    background: none;
+    color:#ffffff;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 90%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+    }
+    input:focus,textarea:focus{
+    outline: none;
+    color: rgb(145, 145, 145);
+    }
+    input:focus~label, 
+    input:valid~label, 
+    textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #a6a7a8;
+    }
+  input[type="submit"] {
+	background-color: #6322db;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 10px;
+  }
+  input[type="submit"]:hover {
+	animation: pulse 1s infinite;
+	background-color: #9b1717;
+  }
+  @keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  .login-box a{
+	text-emphasis: none;
+	font-size: 15px;
+	line-height: 20px;
+	color: rgb(252, 249, 249);
+	}
+	.login-box a:hover{
+	color:#32f372;
+	} 
+	input:focus~.barra::before, textarea:focus~.barra::before{
+	   width: 100%;
+	   }
+	.barra{
+	   position: relative;
+	   display: block;
+	   width: auto;
+	   }
+	   .barra::before{
+	   content: '';
+	   height: 2px;
+	   width: 0%;
+	   bottom: 0;
+	   position: absolute;
+	   background: linear-gradient(to right, #0408fa, #a705a7, #ff05f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	   transition: 0.3s ease all;
+	   left: 0%;
+	   }
+	   @media screen and (max-width:1100px){
+		   form{
+		   width: 50%;
+		   }
+		   }
+		   @media screen and (max-width:600px){
+		   form{
+		   width: 60%;
+		   }
+		   }
+		   @media screen and (max-width:450px){
+		   form{
+		   width: 80%;
+		   }
+		   }
+		   @media screen and (max-width:300px){
+		   form{
+		   width: 90%;
+		   }
+		   }  
